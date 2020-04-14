@@ -49,23 +49,61 @@
                 font-size: 25;   
              } 
 
+             .container {
+                position: relative;
+                width: 100%;
+                max-width: 400px;
+                top: 200px;
+            }
+
+            .container img {
+                width: 100%;
+                height: auto;
+            }
+
+           
+
+            .container .btn {
+                position: absolute;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+            }
+
+           
+
+            .container .btn:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);   
+            }
+
     </style>
 
-    <header>
-        <div class = "mm">
-            <div class = "f2">
-                <U>วิชา Theory of Computation ปีการศึกษา 2562/2 </U><br>
-                60010255 นางสาวญาณิศา วงศ์ศุภา     <br>
-                60010301 นางสาวณัฐณิชา ทองรอด     <br>
-                60010451 นางสาวธัญชนก ตรีอภิบาลวงศา
-            </div>      
-         </div>      
-    </header>
+    
+     
+
 
     <BODY bgcolor="#FFFFFF"></BODY>
-            <center>
-                <img src= "pic/mepMac.png" style="width: 50% ; height: auto ;"/>
-            </center> 
+            <div class = "mm">
+                 <div class = "f2">
+                     <U>วิชา Theory of Computation ปีการศึกษา 2562/2 </U><br>
+                    60010255 นางสาวญาณิศา วงศ์ศุภา     <br>
+                    60010301 นางสาวณัฐณิชา ทองรอด     <br>
+                    60010451 นางสาวธัญชนก ตรีอภิบาลวงศา
+                </div>      
+            </div>     
+
+            <center><div class="container">
+                <img src= "pic/mepempty.png" style="width: 100%"/>
+                <button class="btn"><i><img src= "pic/ปุ่มครีม.png" style = "width: 120px ; height:auto; "  ></i></button>
+            </div></center>
 
     </BODY>
 </html>

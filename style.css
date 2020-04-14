@@ -45,7 +45,7 @@ div.f1 {
  div.f2 {
     font-family: THSarabunNew;
     color:black;
-    font-size: 25;   
+    font-size: 125pt;   
  } 
 
  .container {
@@ -63,7 +63,6 @@ div.f1 {
     position: absolute;
     border: none;
     border-radius: 5px;
-    color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -74,8 +73,7 @@ div.f1 {
     transition-duration: 0.4s;
 }
 
-
-
 .container .btn:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);   
 }
+

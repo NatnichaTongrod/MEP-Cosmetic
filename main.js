@@ -12,9 +12,11 @@ function mascara_minus(paid){
   else if(window.balance > window.price_mascara){
     window.balance = window.balance - window.price_mascara;
     alert("ขอบคุณสำหรับการสั่งซื้อ กรุณารับเงินทอน: "+ window.balance)
+    window.balance = 0;
   }
   else if(window.balance === window.price_mascara){
     alert("ชำระเงินเรียบร้อย ขอบคุณสำหรับการสั่งซื้อค่ะ")
+    window.balance = 0;
   }
   document.getElementById("result_m").innerHTML = window.balance;
 }
@@ -26,9 +28,11 @@ function lip_minus(paid){
   else if(window.balance > window.price_lip){
     window.balance = window.balance - window.price_lip;
     alert("ขอบคุณสำหรับการสั่งซื้อ กรุณารับเงินทอน: "+ window.balance)
+    window.balance = 0;
   }
   else if(window.balance === window.price_lip){
     alert("ชำระเงินเรียบร้อย ขอบคุณสำหรับการสั่งซื้อค่ะ")
+    window.balance = 0;
   }
   document.getElementById("result_l").innerHTML = window.balance;
 }
@@ -40,9 +44,11 @@ function cream_minus(paid){
   else if(window.balance > window.price_cream){
     window.balance = window.balance - window.price_cream;
     alert("ขอบคุณสำหรับการสั่งซื้อ กรุณารับเงินทอน: "+ window.balance)
+    window.balance = 0;
   }
   else if(window.balance === window.price_cream){
     alert("ชำระเงินเรียบร้อย ขอบคุณสำหรับการสั่งซื้อค่ะ")
+    window.balance = 0;
   }
   document.getElementById("result_s").innerHTML = window.balance;
 }
@@ -54,8 +60,10 @@ function foundation_minus(paid){
   else if(window.balance > window.price_foundation){
     window.balance = window.balance - window.price_foundation;
     alert("ขอบคุณสำหรับการสั่งซื้อ กรุณารับเงินทอน: "+ window.balance)
+    window.balance = 0;
   }
   else if(window.balance === window.price_foundation){
+    window.balance = 0;
     alert("ชำระเงินเรียบร้อย ขอบคุณสำหรับการสั่งซื้อค่ะ")
   }
   document.getElementById("result_f").innerHTML = window.balance;
@@ -68,8 +76,10 @@ function puff_minus(paid){
   else if(window.balance > window.price_puff){
     window.balance = window.balance - window.price_puff;
     alert("ขอบคุณสำหรับการสั่งซื้อ กรุณารับเงินทอน: "+ window.balance + " บาท")
+    window.balance = 0;
   }
   else if(window.balance === window.price_puff){
+    window.balance = 0;
     alert("ชำระเงินเรียบร้อย ขอบคุณสำหรับการสั่งซื้อค่ะ")
   }
   document.getElementById("result_p").innerHTML = window.balance;

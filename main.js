@@ -79,7 +79,7 @@ function aler_t(){
   alert("กรุณาเลือกสินค้าก่อนการชำระเงิน ขอบคุณค่ะ");
 }
 
-function aler_t1(){
+function aler_tCancel(){
   alert("กรุณาเลือกสินค้าก่อนทำการยกเลิกค่ะ ขอบคุณค่ะ");
 }
 

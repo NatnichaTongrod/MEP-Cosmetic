@@ -78,6 +78,12 @@ function puff_minus(paid){
 function aler_t(){
   alert("กรุณาเลือกสินค้าก่อนการชำระเงิน ขอบคุณค่ะ");
 }
+
+function aler_t1(){
+  alert("กรุณาเลือกสินค้าก่อนทำการยกเลิกค่ะ ขอบคุณค่ะ");
+}
+
+
 function alertCancel(){
   alert("ทำการยกเลิกการสั่งซื้อ ระบบจะทำการคืนเงินให้ท่าน "+ window.balance + " บาทค่ะ");
 }

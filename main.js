@@ -5,9 +5,9 @@ var price_puff = 95;
 var price_cream = 65;
 var balance = 0;
 
-function mascara_minus(paid){ 
+function mascara_minus(paid){
   if(window.balance < window.price_mascara){
-    window.balance = window.balance + paid;   
+    window.balance = window.balance + paid;
   }
   else if(window.balance > window.price_mascara){
     window.balance = window.balance - window.price_mascara;
@@ -19,9 +19,9 @@ function mascara_minus(paid){
   document.getElementById("result_m").innerHTML = window.balance;
 }
 
-function lip_minus(paid){ 
+function lip_minus(paid){
   if(window.balance < window.price_lip){
-    window.balance = window.balance + paid;   
+    window.balance = window.balance + paid;
   }
   else if(window.balance > window.price_lip){
     window.balance = window.balance - window.price_lip;
@@ -33,9 +33,9 @@ function lip_minus(paid){
   document.getElementById("result_l").innerHTML = window.balance;
 }
 
-function cream_minus(paid){ 
+function cream_minus(paid){
   if(window.balance < window.price_cream){
-    window.balance = window.balance + paid;   
+    window.balance = window.balance + paid;
   }
   else if(window.balance > window.price_cream){
     window.balance = window.balance - window.price_cream;
@@ -47,9 +47,9 @@ function cream_minus(paid){
   document.getElementById("result_s").innerHTML = window.balance;
 }
 
-function foundation_minus(paid){ 
+function foundation_minus(paid){
   if(window.balance < window.price_foundation){
-    window.balance = window.balance + paid;   
+    window.balance = window.balance + paid;
   }
   else if(window.balance > window.price_foundation){
     window.balance = window.balance - window.price_foundation;
@@ -61,9 +61,9 @@ function foundation_minus(paid){
   document.getElementById("result_f").innerHTML = window.balance;
 }
 
-function puff_minus(paid){ 
+function puff_minus(paid){
   if(window.balance < window.price_puff){
-    window.balance = window.balance + paid;   
+    window.balance = window.balance + paid;
   }
   else if(window.balance > window.price_puff){
     window.balance = window.balance - window.price_puff;
@@ -86,5 +86,5 @@ function aler_tCancel(){
 
 function alertCancel(){
   alert("ทำการยกเลิกการสั่งซื้อ ระบบจะทำการคืนเงินให้ท่าน "+ window.balance + " บาทค่ะ");
+  //window.location.href = "index.html";
 }
-

@@ -33,7 +33,6 @@ div.f2 {
     width: 100%;
     max-width: 470px;
     left: 15%;
-    top: 50%;
 }
 
 .container img {
@@ -78,3 +77,14 @@ div.f2 {
   transform: translateY(3px);
 }
 
+.btn5 {
+    background-image: "pic/เหรียญ5.png";
+    width: 40px ;
+    height: auto;
+}
+
+.btn10 {
+    background-image: "pic/เหรียญ10.png";
+    width: 40px ;
+    height: auto;
+}

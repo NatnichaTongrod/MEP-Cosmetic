@@ -5,14 +5,9 @@
     </head>
 
     <BODY bgcolor="#FFFFFF">
-        <script type= "text/javascript" src = "main.js">
-            var price = 80;
-        </script>
-        
-            
-            
+        <script type= "text/javascript" src = "main.js">window.balance = 0;</script>
             <div class = "boxedName">
-                 <div class = "f2" >
+                <div class = "f2" >
                      <U>วิชา Theory of Computation ปีการศึกษา 2562/2 </U><br>
                     60010255 นางสาวญาณิศา วงศ์ศุภา     <br>
                     60010301 นางสาวณัฐณิชา ทองรอด     <br>
@@ -20,23 +15,23 @@
                 </div>      
             </div>   
             
-            <p id = "result"></p>
+            <p id = "result_m"></p>
 
             <div class="container">
                 <img src= "pic/mepempty.png" style="width: 100%"/>
                 <img src= "pic/ปุ่มมาสคาร่า.png" style = "position: absolute; left:49px; top:100px; width: 300px ; height:auto;" ></img>
 
-                <button id = "cancelButton" class="btn2" style="top: 350px; left: 390px;" >
+                <button id = "cancelButton" class="btn2" style="top: 350px; left: 390px;" onclick="alertCancel()">
                     <i><img src= "pic/ปุ่มยกเลิก.png" style = "width: 40px ; height:auto;"></i>
                 </button>
-                <button id = "fiveButton"class="btn2" style="top: 200px; left: 390px;"  onclick="minus(this.price,5)">
+
+                <button id = "fiveButton"class="btn2" style="top: 200px; left: 390px;"  onclick="mascara_minus(5)">
                     <i><img src= "pic/เหรียญ5.png" style = "width: 40px ; height:auto;"></i>
                 </button>
-                <button id = "tenButton" class="btn2" style="top: 250px; left: 390px;" onclick="aler_t()">
+
+                <button id = "tenButton" class="btn2" style="top: 250px; left: 390px;" onclick="mascara_minus(10)">
                     <i><img src= "pic/เหรียญ10.png" style = "width: 40px ; height:auto;"></i>
                 </button>
             </div>
-        
-
     </BODY>
 </html>

@@ -27,19 +27,19 @@
 /*import font*/
 @font-face {
     font-family: "THSarabunNew";
-    src: url("THSarabunNew.ttf");
+    src: url("font/THSarabunNew.ttf");
 }
 @font-face {
     font-family: "CreamCandy";
-    src: url("CreamCandy-8MMqZ.otf");
+    src: url("font/CreamCandy-8MMqZ.otf");
 }
 @font-face {
     font-family: "Anantason";
-    src: url(" Anantason-Regular.ttf");
+    src: url("font/Anantason-Regular.ttf");
 }
 @font-face {
     font-family: "Digi";
-    src: url("DS-DIGIT.ttf");
+    src: url("font/DS-DIGIT.ttf");
 }
 
 /*ชื่อ*/

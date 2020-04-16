@@ -24,6 +24,17 @@
    left: 10px;
 }
 
+.boxArai{
+   
+    text-align: center;
+    position: absolute;
+    width: 320px;
+    height: fit-content;
+    top: 365px; 
+    left: 37px; 
+    position:absolute;
+}
+
 /*import font*/
 @font-face {
     font-family: "Serithai";
@@ -56,6 +67,12 @@
     font-size: 25pt;
 }
 
+.fontBalance{
+    font-family: Anantason;
+    color:black;
+    font-size: 18pt;
+}
+
 .fcoin{
   font-family: Anantason;
   color: black;
@@ -70,12 +87,7 @@
     margin-top : 15px;
     margin-left: 5%;
 }
-/*
-.container img {
-    width: 100%;
-    height: auto;
-}
-*/
+
 /*ปุ่มรูปภาพ*/
 .container .btn {
     position: absolute;
@@ -129,4 +141,12 @@
     background-color: turquoise;
     width: 40px ;
     height: auto;
+}
+
+.boxPush{
+    text-align: center;
+    border: 1px;
+    position: absolute;
+    width:200px;
+    height: 200px;;
 }

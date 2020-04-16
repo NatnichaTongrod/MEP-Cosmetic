@@ -22,7 +22,7 @@
                 <img src= "pic/mepempty.png" style="width: 100%"/>
                 <img src= "pic/วิธีการใช้งาน.png" style = "position: absolute; left:500px; top:10px; height: 680px;  " >
                 <img src= "pic/ปุ่มครีม.png" style = "position: absolute; left:49px; top:100px; width: 300px ; height:auto;  " ></img>
-                <img src= "pic/DFA-ครีม50.png" style = "position: absolute; left:0px; top:750px; width: auto ; height:200px;  " >
+                
 
                 <button id = "cancelButton" class="btn2" style="top: 370px; left: 395px;" onclick="alertCancel()">
                     <i><img src= "pic/ปุ่มยกเลิก.png" style = "width: 40px ; height:auto;"></i>
@@ -34,13 +34,19 @@
                     <i><img src= "pic/เหรียญ10.png" style = "width: 40px ; height:auto;"></i>
                 </button>
                 
-                <button id="confirm_c" class="btn2" disabled style="border-radius:50%; top: 395px; left: 395px; position:absolute;" onclick = "okAlert_c()">
-                    <i><img src= "pic/ปุ่มตกลง.png" style = "width: 40px ; height:auto;"></i>
+                <button id="push_c"  style="top: 575px; left: 150px; position:absolute; visibility: hidden; background-color: transparent; border:none" onclick = "pushCon_c()">
+                    <i><img src= "pic/cream.png" style = "width: auto ; height:100px;"></i>
                 </button>
-                <button id="push_c"  disabled style="border-radius:50%; top: 600px; left: 180px; position:absolute;" onclick = "pushCon()">push</button>
 
-                <p id = "result_s"class="fontDigi" style="top: 120px; left: 395px; position:absolute;">0</p>
+                <div class="boxArai">
+                    <p class = "fontBalance" style="margin:3px">ชำระเงินแล้ว</p>
+                    <p id = "result_s" class="fontDigi" style="margin:3px">0</p>
+                    <p class = "fontBalance"style="margin:3px">บาท</p>
+                    
+                </div>
+
             </div>
+            <center><img src= "pic/DFA-ครีม50.png" style = "position: absolute; left:0px; margin-top: 20px; width: 100% ; height: auto;  " ></center>
 
     </BODY>
 </html>

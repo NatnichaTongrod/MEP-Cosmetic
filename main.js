@@ -2,7 +2,7 @@ var price_mascara = 80;
 var price_lip = 65;
 var price_foundation = 70;
 var price_puff = 95;
-var price_cream = 65;
+var price_cream = 50;
 var balance = 0;
 
 function mascara_minus(paid){
@@ -21,7 +21,6 @@ function OK_m(){
   } 
 }
 
-
 /*-------------------------------------------------------------------------------*/
 
 function lip_minus(paid){
@@ -31,23 +30,16 @@ function lip_minus(paid){
 }
 
 function OK_l(){
-  var btnOK2 = document.getElementById("confirm_l");
+  var pushB2 = document.getElementById("push_l");
+  var cancel1 = document.getElementById("cancelButton");
+
   if(window.balance >= window.price_lip){
-    btnOK2.disabled = false;
+    pushB2.style.visibility = "visible";
+    cancel1.disabled = true;
   } 
 }
 
-function okAlert_l(){
-  var pushB2 = document.getElementById("push_l");
-  pushB2.disabled = false;
-  if(window.balance > window.price_lip){
-    window.balance = window.balance - window.price_lip;
-    alert("ชำระเงินเรียบร้อย รับเงินทอน "+ window.balance + " บาท \nกรุณารับสินค้าที่ช่องด้านล่าง ขอบคุณค่ะ");
-    window.balance = 0;
-  }else{
-    alert("ชำระเงินเรียบร้อย กรุณารับสินค้าที่ช่องด้านล่าง ขอบคุณค่ะ");
-  }
-}
+
 
 /*-------------------------------------------------------------------------------*/
 
@@ -59,23 +51,15 @@ function cream_minus(paid){
 }
 
 function OK_c(){
-  var btnOK3 = document.getElementById("confirm_c");
+  var pushB3 = document.getElementById("push_c");
+  var cancel1 = document.getElementById("cancelButton");
+
   if(window.balance >= window.price_cream){
-    btnOK3.disabled = false;
+    pushB3.style.visibility = "visible";
+    cancel1.disabled = true;
   } 
 }
 
-function okAlert_c(){
-  var pushB3 = document.getElementById("push_c");
-  pushB3.disabled = false;
-  if(window.balance > window.price_cream){
-    window.balance = window.balance - window.price_cream;
-    alert("ชำระเงินเรียบร้อย รับเงินทอน "+ window.balance + " บาท \nกรุณารับสินค้าที่ช่องด้านล่าง ขอบคุณค่ะ");
-    window.balance = 0;
-  }else{
-    alert("ชำระเงินเรียบร้อย กรุณารับสินค้าที่ช่องด้านล่าง ขอบคุณค่ะ");
-  }
-}
 
 /*-------------------------------------------------------------------------------*/
 
@@ -86,22 +70,13 @@ function foundation_minus(paid){
 }
 
 function OK_f(){
-  var btnOK4 = document.getElementById("confirm");
-  if(window.balance >= window.price_foundation){
-    btnOK4.disabled = false;
-  } 
-}
-
-function okAlert_f(){
   var pushB4 = document.getElementById("push_f");
-  pushB4.disabled = false;
-  if(window.balance > window.price_foundation){
-    window.balance = window.balance - window.price_foundation;
-    alert("ชำระเงินเรียบร้อย รับเงินทอน "+ window.balance + " บาท \nกรุณารับสินค้าที่ช่องด้านล่าง ขอบคุณค่ะ");
-    window.balance = 0;
-  }else{
-    alert("ชำระเงินเรียบร้อย กรุณารับสินค้าที่ช่องด้านล่าง ขอบคุณค่ะ");
-  }
+  var cancel1 = document.getElementById("cancelButton");
+
+  if(window.balance >= window.price_foundation){
+    pushB4.style.visibility = "visible";
+    cancel1.disabled = true;
+  } 
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -113,23 +88,13 @@ function puff_minus(paid){
 }
 
 function OK(){
-  var btnOK5 = document.getElementById("confirm");
-  if(window.balance >= window.price_puff){
-    btnOK5.disabled = false;
-  } 
-}
+  var pushB5 = document.getElementById("push_p");
+  var cancel1 = document.getElementById("cancelButton");
 
-function okAlert(){
-  var pushB5 = document.getElementById("push");
-  pushB5.disabled = false;
-  document.getElementById("result_p").innerHTML = window.balance;
-  if(window.balance > window.price_puff){
-    window.balance = window.balance - window.price_puff;
-    alert("ชำระเงินเรียบร้อย รับเงินทอน "+ window.balance + " บาท \nกรุณารับสินค้าที่ช่องด้านล่าง ขอบคุณค่ะ");
-    window.balance = 0;
-  }else{
-    alert("ชำระเงินเรียบร้อย กรุณารับสินค้าที่ช่องด้านล่าง ขอบคุณค่ะ");
-  }
+  if(window.balance >= window.price_puff){
+    pushB5.style.visibility = "visible";
+    cancel1.disabled = true;
+  } 
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -138,24 +103,81 @@ function aler_t(){
   alert("่ท่านยังไม่ได้ทำการเลือกสินค้า กรุณาเลือกสินค้าก่อนค่ะ");
 }
 
-function alert2(){
-  alert("่**ว่างเปล่า**");
-}
-
 function aler_tCancel(){
   alert("กรุณาเลือกสินค้าก่อนทำการยกเลิกค่ะ ขอบคุณค่ะ");
 }
 
+/*-------------------------------------------------------------------------------*/
 
-function alertCancel(){
-  var userconfirmation = confirm("ทำการยกเลิกคำสั่งซื้อ ระบบจะคืนเงินให้ท่าน "+ window.balance +" บาท");
-  if(userconfirmation == true){
+function alertCancel_m(){
+  if(window.balance >= window.price_mascara){
+    alert("ไม่สามารถทำการยกเลิกได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ "+ window.balance +" บาท");
+  }else {
+    alert("ทำการยกเลิกคำสั่งซื้อ ระบบจะคืนเงินให้ท่าน "+ window.balance +" บาท");
+    window.location.assign("index.html");
+  }
+}
+function alertCancel_l(){
+  if(window.balance >= window.price_lip){
+    alert("ไม่สามารถทำการยกเลิกได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ "+ window.balance +" บาท");
+  }else {
+    alert("ทำการยกเลิกคำสั่งซื้อ ระบบจะคืนเงินให้ท่าน "+ window.balance +" บาท");
+    window.location.assign("index.html");
+  }
+}
+function alertCancel_p(){
+  if(window.balance >= window.price_puff){
+    alert("ไม่สามารถทำการยกเลิกได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ "+ window.balance +" บาท");
+  }else {
+    alert("ทำการยกเลิกคำสั่งซื้อ ระบบจะคืนเงินให้ท่าน "+ window.balance +" บาท");
+    window.location.assign("index.html");
+  }
+}
+function alertCancel_c(){
+  if(window.balance >= window.price_cream){
+    alert("ไม่สามารถทำการยกเลิกได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ "+ window.balance +" บาท");
+  }else {
+    alert("ทำการยกเลิกคำสั่งซื้อ ระบบจะคืนเงินให้ท่าน "+ window.balance +" บาท");
+    window.location.assign("index.html");
+  }
+}
+function alertCancel_f(){
+  if(window.balance >= window.price_foundation){
+    alert("ไม่สามารถทำการยกเลิกได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ "+ window.balance +" บาท");
+  }else {
+    alert("ทำการยกเลิกคำสั่งซื้อ ระบบจะคืนเงินให้ท่าน "+ window.balance +" บาท");
     window.location.assign("index.html");
   }
 }
 
-function pushCon(){
+/*-------------------------------------------------------------------------------*/
+
+function pushCon_m(){
   window.balance = window.balance - window.price_mascara;
+  alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
+  window.location.assign("index.html");
+}
+
+function pushCon_l(){
+  window.balance = window.balance - window.price_lip;
+  alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
+  window.location.assign("index.html");
+}
+
+function pushCon_c(){
+  window.balance = window.balance - window.price_cream;
+  alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
+  window.location.assign("index.html");
+}
+
+function pushCon_f(){
+  window.balance = window.balance - window.price_foundation;
+  alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
+  window.location.assign("index.html");
+}
+
+function pushCon_p(){
+  window.balance = window.balance - window.price_puff;
   alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
   window.location.assign("index.html");
 }

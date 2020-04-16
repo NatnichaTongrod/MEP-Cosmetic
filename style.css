@@ -26,8 +26,8 @@
 
 /*import font*/
 @font-face {
-    font-family: "THSarabunNew";
-    src: url("font/THSarabunNew.ttf");
+    font-family: "Serithai";
+    src: url("Serithai-Regular.ttf");
 }
 @font-face {
     font-family: "CreamCandy";
@@ -45,7 +45,7 @@
 /*ชื่อ*/
 .boxedName .f2 {
     position: absolute;
-    font-family: THSarabunNew;
+    font-family: Serithai;
     color:white;
     font-size: 25pt;
 }

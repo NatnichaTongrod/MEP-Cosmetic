@@ -37,7 +37,10 @@
     font-family: "Anantason";
     src: url(" Anantason-Regular.ttf");
 }
-
+@font-face {
+    font-family: "Digi";
+    src: url("DS-DIGIT.ttf");
+}
 
 /*ชื่อ*/
 .boxedName .f2 {
@@ -45,7 +48,12 @@
     font-family: THSarabunNew;
     color:white;
     font-size: 25pt;
+}
 
+.fontDigi{
+    font-family: Digi;
+    color:whitesmoke;
+    font-size: 25pt;
 }
 
 .fcoin{

@@ -86,7 +86,7 @@ function puff_minus(paid){
 }
 
 function aler_t(){
-  alert("กรุณาเลือกสินค้าก่อนการชำระเงิน ขอบคุณค่ะ");
+  alert("่ท่านยังไม่ได้ทำการเลือกสินค้า กรุณาเลือกสินค้าก่อนค่ะ");
 }
 
 function aler_tCancel(){
@@ -95,6 +95,8 @@ function aler_tCancel(){
 
 
 function alertCancel(){
-  alert("ทำการยกเลิกการสั่งซื้อ ระบบจะทำการคืนเงินให้ท่าน "+ window.balance + " บาทค่ะ");
-  //window.location.href = "index.html";
+  var userconfirmation = confirm("ทำการยกเลิกคำสั่งซื้อ");
+  if(userconfirmation == true){
+    window.location.assign("index.html");
+  }
 }

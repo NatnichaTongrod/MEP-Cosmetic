@@ -38,7 +38,7 @@
     src: url("font/Anantason-Regular.ttf");
 }
 @font-face {
-    font-family: "Digi";
+    font-family: "Digit";
     src: url("font/DS-DIGIT.ttf");
 }
 
@@ -51,7 +51,7 @@
 }
 
 .fontDigi{
-    font-family: Digi;
+    font-family: Digit;
     color: #ff007a;
     font-size: 25pt;
 }

@@ -4,16 +4,19 @@
         <link rel = "stylesheet" type= "text/css" href = "style.css">
     </head>
 
-    <BODY bgcolor="#FFFFFF">
+    <BODY bgcolor="#dfdfdf">
         <script type= "text/javascript" src = "main.js">window.balance = 0;</script>
-            <div class = "boxedName">
-                 <div class = "f2" >
+            <!---ชื่อผู้จัดทำ-->
+            <div class = "boxedName" style="background-color:#393939;">
+                <img src= "pic/LogoHead.png" style="position: absolute; height: 180px;top: 10px;left: 20px;" />
+
+                 <div class = "f2" style="left: 30%;top: 15px;">
                      <U>วิชา Theory of Computation ปีการศึกษา 2562/2 </U><br>
                     60010255 นางสาวญาณิศา วงศ์ศุภา     <br>
                     60010301 นางสาวณัฐณิชา ทองรอด     <br>
                     60010451 นางสาวธัญชนก ตรีอภิบาลวงศา
-                </div>
-            </div>
+                </div>      
+            </div>     
 
             
 
@@ -23,15 +26,20 @@
                 <img src= "pic/ปุ่มลิป.png" style = "position: absolute; left:49px; top:100px; width: 300px ; height:auto;  " ></img>
                 <img src= "pic/DFA-65.png" style = "position: absolute; left:0px; top:750px; height: 250px;  width: auto ;  " >
 
-                <button id = "cancelButton" class="btn2" style="top: 350px; left: 390px;" onclick="alertCancel()">
+                <button id = "cancelButton" class="btn2" style="top: 370px; left: 395px;" onclick="alertCancel()">
                     <i><img src= "pic/ปุ่มยกเลิก.png" style = "width: 40px ; height:auto;"></i>
                 </button>
-                <button id = "fiveButton"class="btn2" style="top: 200px; left: 390px;" onclick="lip_minus(5)">
+                <button id = "fiveButton"class="btn2" style="top: 200px; left: 395px;" onclick="lip_minus(5)">
                     <i><img src= "pic/เหรียญ5.png" style = "width: 40px ; height:auto;"></i>
                 </button>
-                <button id = "tenButton" class="btn2" style="top: 250px; left: 390px;" onclick="lip_minus(10)">
+                <button id = "tenButton" class="btn2" style="top: 250px; left: 395px;" onclick="lip_minus(10)">
                     <i><img src= "pic/เหรียญ10.png" style = "width: 40px ; height:auto;"></i>
                 </button>
+
+                <button id="confirm_l" class="btn2" disabled style="border-radius:50%; top: 320px; left: 395px; position:absolute;" onclick = "okAlert_l()">
+                    <i><img src= "pic/ปุ่มตกลง.png" style = "width: 40px ; height:auto;"></i>
+                </button>
+                <button id="push_l"  disabled style="border-radius:50%; top: 600px; left: 180px; position:absolute;" onclick = "pushCon()">push</button>
                 
                 <p id = "result_l"class="fontDigi" style="top: 120px; left: 395px; position:absolute;">0</p>
             </div>

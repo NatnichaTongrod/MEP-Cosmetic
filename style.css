@@ -52,7 +52,7 @@
 
 .fontDigi{
     font-family: Digi;
-    color:whitesmoke;
+    color: #ff007a;
     font-size: 25pt;
 }
 
@@ -121,6 +121,12 @@
 
 .btn10 {
     background-image: "pic/เหรียญ10.png";
+    width: 40px ;
+    height: auto;
+}
+
+.btnOK_Push{
+    background-color: turquoise;
     width: 40px ;
     height: auto;
 }

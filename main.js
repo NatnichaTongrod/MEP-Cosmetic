@@ -6,43 +6,26 @@ var price_cream = 65;
 var balance = 0;
 
 function mascara_minus(paid){
-  if(window.balance < window.price_mascara){
-    window.balance = window.balance + paid;
-  }
-  else if(window.balance > window.price_mascara){
-    window.balance = window.balance - window.price_mascara;
-    alert("ขอบคุณสำหรับการสั่งซื้อ กรุณารับเงินทอน: "+ window.balance)
-    window.balance = 0;
-  }
+  window.balance = window.balance + paid;
   document.getElementById("result_m").innerHTML = window.balance;
   OK_m();
 }
 
 function OK_m(){
-  var btnOK1 = document.getElementById("confirm_m");
+  var pushB1 = document.getElementById("push_m");
+  var cancel1 = document.getElementById("cancelButton");
+
   if(window.balance >= window.price_mascara){
-    btnOK1.disabled = false;
+    pushB1.style.visibility = "visible";
+    cancel1.disabled = true;
   } 
 }
 
-function okAlert_m(){
-  var pushB1 = document.getElementById("push_m");
-  pushB1.disabled = false;
-  if(window.balance > window.price_mascara){
-    window.balance = window.balance - window.price_mascara;
-    alert("ชำระเงินเรียบร้อย รับเงินทอน "+ window.balance + " บาท \nกรุณารับสินค้าที่ช่องด้านล่าง ขอบคุณค่ะ");
-    window.balance = 0;
-  }else{
-    alert("ชำระเงินเรียบร้อย กรุณารับสินค้าที่ช่องด้านล่าง ขอบคุณค่ะ");
-  }
-}
 
 /*-------------------------------------------------------------------------------*/
 
 function lip_minus(paid){
-  if(window.balance < window.price_lip){
-    window.balance = window.balance + paid;
-  }
+  window.balance = window.balance + paid;
   document.getElementById("result_l").innerHTML = window.balance;
   OK_l();
 }
@@ -69,9 +52,8 @@ function okAlert_l(){
 /*-------------------------------------------------------------------------------*/
 
 function cream_minus(paid){
-  if(window.balance < window.price_cream){
-    window.balance = window.balance + paid;
-  }
+  
+  window.balance = window.balance + paid;
   document.getElementById("result_s").innerHTML = window.balance;
   OK_c();
 }
@@ -98,9 +80,7 @@ function okAlert_c(){
 /*-------------------------------------------------------------------------------*/
 
 function foundation_minus(paid){
-  if(window.balance < window.price_foundation){
-    window.balance = window.balance + paid;
-  }
+  window.balance = window.balance + paid;
   document.getElementById("result_f").innerHTML = window.balance;
   OK_f();
 }
@@ -127,9 +107,7 @@ function okAlert_f(){
 /*-------------------------------------------------------------------------------*/
 
 function puff_minus(paid){
-  if(window.balance < window.price_puff){
-    window.balance = window.balance + paid;
-  }
+  window.balance = window.balance + paid;
   document.getElementById("result_p").innerHTML = window.balance;
   OK();
 }
@@ -177,8 +155,7 @@ function alertCancel(){
 }
 
 function pushCon(){
-  var pushC = confirm("รับสินค้าเรียบร้อย ขอบคุณที่ใช้บริการ");
-  if(pushC == true){
-    window.location.assign("index.html");
-  }
+  window.balance = window.balance - window.price_mascara;
+  alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
+  window.location.assign("index.html");
 }

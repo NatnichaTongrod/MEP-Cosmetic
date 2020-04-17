@@ -191,7 +191,7 @@ function puff_dfa(paid){
       }
       else if(paid === 10){
         sum = sum + paid;
-        p_pos = p_pos + 100;
+        p_pos = p_pos + 122;
         img.style.left = p_pos + "px";
     	}
     }else{
@@ -214,12 +214,90 @@ function foun_dfa(paid){
       }
       else if(paid === 10){
         sum = sum + paid;
-        img.style.left + "80px";
         f_pos = f_pos + 159;
         img.style.left = f_pos + "px";
     	}
     }else{
       img.style.left = f_pos;
+    }
+
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+var c_pos = 88;
+function cream_dfa(paid){
+  var img = document.getElementById('cir_cream');
+  if(sum < 50){
+      if(paid === 5){
+        sum = sum + paid;
+        c_pos = c_pos + 106.32;
+        img.style.left = c_pos + "px";
+
+      }
+      else if(paid === 10){
+        sum = sum + paid;
+        c_pos = c_pos + 212.64;
+        img.style.left = c_pos + "px";
+    	}
+    }else{
+      img.style.left = c_pos;
+    }
+
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+var m_pos = 69.5;
+var i = 0.05;
+function mascara_dfa(paid){
+  var img = document.getElementById('cir_mas');
+  if(sum < 80){
+      if(paid === 5){
+        sum = sum + paid;
+        m_pos = m_pos + 70 + i;
+        i = i +0.05;
+        img.style.left = m_pos + "px";
+
+      }
+      else if(paid === 10){
+        sum = sum + paid;
+        i = i +0.05;
+        m_pos = m_pos + 140 + i;
+        img.style.left = m_pos + "px";
+        i = i +0.05;
+    	}
+    }else{
+      img.style.left = m_pos;
+      i = 0.05;
+    }
+
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+var l_pos = 83;
+var j = 0.04;
+function lip_dfa(paid){
+  var img = document.getElementById('cir_lip');
+  if(sum < 65){
+      if(paid === 5){
+        sum = sum + paid;
+        l_pos = l_pos + 84 + j;
+        j = j +0.04;
+        img.style.left = l_pos + "px";
+
+      }
+      else if(paid === 10){
+        sum = sum + paid;
+        j = j +0.04;
+        l_pos = l_pos + 168 + j;
+        j = j +0.04;
+        img.style.left = l_pos + "px";
+    	}
+    }else{
+      img.style.left = l_pos;
+      j = 0.04;
     }
 
 }

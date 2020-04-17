@@ -171,15 +171,26 @@ function pushCon_p(){
 }
 
 /*-----------------------------------------------------------------------------------*/
-var p_pos = 34;
+var p_pos = 0;
+var sum = 0;
+
 function puff_dfa(paid){
   var img = document.getElementById('cir_puff');
-  if(paid === 5){
-    p_pos += 75
-    img.style.left = p_pos + "px";
-    sum = paid + 5;
-  }
-  if(paid === 10){
-    img.style.left + "80px";
-	}
+  if(sum < 95){
+      if(paid === 5){
+        sum = sum + paid;
+        p_pos = p_pos + 70;
+        img.style.left = p_pos + "px";
+
+      }
+      else if(paid === 10){
+        sum = sum + paid;
+        img.style.left + "80px";
+        p_pos = p_pos + 100;
+        img.style.left = p_pos + "px";
+    	}
+    }else{
+      img.style.left = p_pos;
+    }
+    document.getElementById("sum").innerHTML = window.sum;
 }

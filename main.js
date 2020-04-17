@@ -18,7 +18,7 @@ function OK_m(){
   if(window.balance >= window.price_mascara){
     pushB1.style.visibility = "visible";
     cancel1.disabled = true;
-  } 
+  }
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -36,7 +36,7 @@ function OK_l(){
   if(window.balance >= window.price_lip){
     pushB2.style.visibility = "visible";
     cancel1.disabled = true;
-  } 
+  }
 }
 
 
@@ -44,7 +44,7 @@ function OK_l(){
 /*-------------------------------------------------------------------------------*/
 
 function cream_minus(paid){
-  
+
   window.balance = window.balance + paid;
   document.getElementById("result_s").innerHTML = window.balance;
   OK_c();
@@ -57,7 +57,7 @@ function OK_c(){
   if(window.balance >= window.price_cream){
     pushB3.style.visibility = "visible";
     cancel1.disabled = true;
-  } 
+  }
 }
 
 
@@ -76,7 +76,7 @@ function OK_f(){
   if(window.balance >= window.price_foundation){
     pushB4.style.visibility = "visible";
     cancel1.disabled = true;
-  } 
+  }
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -94,7 +94,7 @@ function OK(){
   if(window.balance >= window.price_puff){
     pushB5.style.visibility = "visible";
     cancel1.disabled = true;
-  } 
+  }
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -180,4 +180,18 @@ function pushCon_p(){
   window.balance = window.balance - window.price_puff;
   alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
   window.location.assign("index.html");
+}
+
+/*-----------------------------------------------------------------------------------*/
+var p_pos = 0;
+function puff_dfa(paid){
+  var img = document.getElementById('cir_puff');
+  if(paid === 5){
+    p_pos += 80
+    img.style.left = p_pos + "px";
+    sum = paid + 5;
+  }
+  if(paid === 10){
+    img.style.left + "80px";
+	}
 }

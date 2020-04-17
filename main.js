@@ -4,6 +4,7 @@ var price_foundation = 70;
 var price_puff = 95;
 var price_cream = 50;
 var balance = 0;
+var sum = 0;
 
 function mascara_minus(paid){
   window.balance = window.balance + paid;
@@ -101,6 +102,7 @@ function alertCancel_m(){
   if(window.balance >= window.price_mascara){
     alert("ไม่สามารถทำการยกเลิกคำสั่งซื้อได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ");
   }else {
+    sum = 0;
     alert("ทำการยกเลิกคำสั่งซื้อ ระบบจะคืนเงินให้ท่าน "+ window.balance +" บาท");
     window.location.assign("index.html");
   }
@@ -141,45 +143,49 @@ function alertCancel_f(){
 /*-------------------------------------------------------------------------------*/
 
 function pushCon_m(){
+  sum = 0;
   window.balance = window.balance - window.price_mascara;
   alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
   window.location.assign("index.html");
 }
 
 function pushCon_l(){
+  sum = 0;
   window.balance = window.balance - window.price_lip;
   alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
   window.location.assign("index.html");
 }
 
 function pushCon_c(){
+  sum = 0;
   window.balance = window.balance - window.price_cream;
   alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
   window.location.assign("index.html");
 }
 
 function pushCon_f(){
+  sum = 0;
   window.balance = window.balance - window.price_foundation;
   alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
   window.location.assign("index.html");
 }
 
 function pushCon_p(){
+  sum = 0;
   window.balance = window.balance - window.price_puff;
   alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
   window.location.assign("index.html");
 }
 
 /*-----------------------------------------------------------------------------------*/
-var p_pos = 0;
-var sum = 0;
 
+var p_pos = 60;
 function puff_dfa(paid){
   var img = document.getElementById('cir_puff');
   if(sum < 95){
       if(paid === 5){
         sum = sum + paid;
-        p_pos = p_pos + 70;
+        p_pos = p_pos + 60;
         img.style.left = p_pos + "px";
 
       }
@@ -193,4 +199,5 @@ function puff_dfa(paid){
       img.style.left = p_pos;
     }
     document.getElementById("sum").innerHTML = window.sum;
+    document.getElementById("pos").innerHTML = window.p_pos;
 }

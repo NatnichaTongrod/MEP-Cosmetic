@@ -183,11 +183,11 @@ function pushCon_p(){
 }
 
 /*-----------------------------------------------------------------------------------*/
-var p_pos = 0;
+var p_pos = 34;
 function puff_dfa(paid){
   var img = document.getElementById('cir_puff');
   if(paid === 5){
-    p_pos += 80
+    p_pos += 75
     img.style.left = p_pos + "px";
     sum = paid + 5;
   }

@@ -13,11 +13,8 @@ function mascara_minus(paid){
 
 function OK_m(){
   var pushB1 = document.getElementById("push_m");
-  var cancel1 = document.getElementById("cancelButton");
-
   if(window.balance >= window.price_mascara){
     pushB1.style.visibility = "visible";
-    cancel1.disabled = true;
   }
 }
 
@@ -31,11 +28,8 @@ function lip_minus(paid){
 
 function OK_l(){
   var pushB2 = document.getElementById("push_l");
-  var cancel1 = document.getElementById("cancelButton");
-
   if(window.balance >= window.price_lip){
     pushB2.style.visibility = "visible";
-    cancel1.disabled = true;
   }
 }
 
@@ -52,11 +46,8 @@ function cream_minus(paid){
 
 function OK_c(){
   var pushB3 = document.getElementById("push_c");
-  var cancel1 = document.getElementById("cancelButton");
-
   if(window.balance >= window.price_cream){
     pushB3.style.visibility = "visible";
-    cancel1.disabled = true;
   }
 }
 
@@ -71,11 +62,8 @@ function foundation_minus(paid){
 
 function OK_f(){
   var pushB4 = document.getElementById("push_f");
-  var cancel1 = document.getElementById("cancelButton");
-
   if(window.balance >= window.price_foundation){
     pushB4.style.visibility = "visible";
-    cancel1.disabled = true;
   }
 }
 
@@ -89,11 +77,8 @@ function puff_minus(paid){
 
 function OK(){
   var pushB5 = document.getElementById("push_p");
-  var cancel1 = document.getElementById("cancelButton");
-
   if(window.balance >= window.price_puff){
     pushB5.style.visibility = "visible";
-    cancel1.disabled = true;
   }
 }
 
@@ -111,7 +96,7 @@ function aler_tCancel(){
 
 function alertCancel_m(){
   if(window.balance >= window.price_mascara){
-    alert("ไม่สามารถทำการยกเลิกได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ "+ window.balance +" บาท");
+    alert("ไม่สามารถทำการยกเลิกคำสั่งซื้อได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ");
   }else {
     alert("ทำการยกเลิกคำสั่งซื้อ ระบบจะคืนเงินให้ท่าน "+ window.balance +" บาท");
     window.location.assign("index.html");
@@ -119,7 +104,7 @@ function alertCancel_m(){
 }
 function alertCancel_l(){
   if(window.balance >= window.price_lip){
-    alert("ไม่สามารถทำการยกเลิกได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ "+ window.balance +" บาท");
+    alert("ไม่สามารถทำการยกเลิกคำสั่งซื้อได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ");
   }else {
     alert("ทำการยกเลิกคำสั่งซื้อ ระบบจะคืนเงินให้ท่าน "+ window.balance +" บาท");
     window.location.assign("index.html");
@@ -127,7 +112,7 @@ function alertCancel_l(){
 }
 function alertCancel_p(){
   if(window.balance >= window.price_puff){
-    alert("ไม่สามารถทำการยกเลิกได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ "+ window.balance +" บาท");
+    alert("ไม่สามารถทำการยกเลิกคำสั่งซื้อได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ");
   }else {
     alert("ทำการยกเลิกคำสั่งซื้อ ระบบจะคืนเงินให้ท่าน "+ window.balance +" บาท");
     window.location.assign("index.html");
@@ -135,7 +120,7 @@ function alertCancel_p(){
 }
 function alertCancel_c(){
   if(window.balance >= window.price_cream){
-    alert("ไม่สามารถทำการยกเลิกได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ "+ window.balance +" บาท");
+    alert("ไม่สามารถทำการยกเลิกคำสั่งซื้อได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ");
   }else {
     alert("ทำการยกเลิกคำสั่งซื้อ ระบบจะคืนเงินให้ท่าน "+ window.balance +" บาท");
     window.location.assign("index.html");
@@ -143,7 +128,7 @@ function alertCancel_c(){
 }
 function alertCancel_f(){
   if(window.balance >= window.price_foundation){
-    alert("ไม่สามารถทำการยกเลิกได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ "+ window.balance +" บาท");
+    alert("ไม่สามารถทำการยกเลิกคำสั่งซื้อได้ เนื่องจากชำระเงินครบแล้ว\nกรุณารับสินค้าที่ช่องรับของ");
   }else {
     alert("ทำการยกเลิกคำสั่งซื้อ ระบบจะคืนเงินให้ท่าน "+ window.balance +" บาท");
     window.location.assign("index.html");

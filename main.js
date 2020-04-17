@@ -179,25 +179,47 @@ function pushCon_p(){
 
 /*-----------------------------------------------------------------------------------*/
 
-var p_pos = 60;
+var p_pos = 59;
 function puff_dfa(paid){
   var img = document.getElementById('cir_puff');
   if(sum < 95){
       if(paid === 5){
         sum = sum + paid;
-        p_pos = p_pos + 60;
+        p_pos = p_pos + 61;
         img.style.left = p_pos + "px";
 
       }
       else if(paid === 10){
         sum = sum + paid;
-        img.style.left + "80px";
-        p_pos = p_pos + 120;
+        p_pos = p_pos + 100;
         img.style.left = p_pos + "px";
     	}
     }else{
       img.style.left = p_pos;
     }
-    document.getElementById("sum").innerHTML = window.sum;
-    document.getElementById("pos").innerHTML = window.p_pos;
+
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+var f_pos = 73.5;
+function foun_dfa(paid){
+  var img = document.getElementById('cir_foun');
+  if(sum < 70){
+      if(paid === 5){
+        sum = sum + paid;
+        f_pos = f_pos + 79.5;
+        img.style.left = f_pos + "px";
+
+      }
+      else if(paid === 10){
+        sum = sum + paid;
+        img.style.left + "80px";
+        f_pos = f_pos + 159;
+        img.style.left = f_pos + "px";
+    	}
+    }else{
+      img.style.left = f_pos;
+    }
+
 }

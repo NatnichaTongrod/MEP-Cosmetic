@@ -192,7 +192,7 @@ function puff_dfa(paid){
       else if(paid === 10){
         sum = sum + paid;
         img.style.left + "80px";
-        p_pos = p_pos + 100;
+        p_pos = p_pos + 120;
         img.style.left = p_pos + "px";
     	}
     }else{

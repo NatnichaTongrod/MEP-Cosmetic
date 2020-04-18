@@ -6,6 +6,52 @@ var price_cream = 50;
 var balance = 0;
 var sum = 0;
 
+/*---------------------------------------------------------------------------*/
+
+
+function pushCon_c(){
+  const modal1 = document.querySelector('#my-modal-c');
+  window.balance = window.balance - window.price_cream;
+  modal1.style.display = 'block';
+  document.getElementById("showMeModal_c").innerHTML = "เงินทอน "+ window.balance + " บาท";
+}
+
+function pushCon_m(){
+  const modal2 = document.querySelector('#my-modal-m');
+  window.balance = window.balance - window.price_mascara;
+  modal2.style.display = 'block';
+  document.getElementById("showMeModal_m").innerHTML = "เงินทอน "+ window.balance + " บาท";
+}
+
+function pushCon_l(){
+  const modal3 = document.querySelector('#my-modal-l');
+  window.balance = window.balance - window.price_lip;
+  modal3.style.display = 'block';
+  document.getElementById("showMeModal_l").innerHTML = "เงินทอน "+ window.balance + " บาท";
+}
+
+function pushCon_f(){
+  const modal4 = document.querySelector('#my-modal-f');
+  window.balance = window.balance - window.price_foundation;
+  modal4.style.display = 'block';
+  document.getElementById("showMeModal_f").innerHTML = "เงินทอน "+ window.balance + " บาท";
+}
+
+function pushCon_p(){
+  const modal5 = document.querySelector('#my-modal-p');
+  window.balance = window.balance - window.price_puff;
+  modal5.style.display = 'block';
+  document.getElementById("showMeModal_p").innerHTML = "เงินทอน "+ window.balance + " บาท";
+}
+
+/*---------------------------------------------------------------------------*/
+
+function comeBackHome(){
+  window.location.assign("index.html");
+}
+
+/*---------------------------------------------------------------------------*/
+
 function mascara_minus(paid){
   window.balance = window.balance + paid;
   document.getElementById("result_m").innerHTML = window.balance;
@@ -51,8 +97,6 @@ function OK_c(){
     pushB3.style.visibility = "visible";
   }
 }
-
-
 /*-------------------------------------------------------------------------------*/
 
 function foundation_minus(paid){
@@ -142,40 +186,6 @@ function alertCancel_f(){
 
 /*-------------------------------------------------------------------------------*/
 
-function pushCon_m(){
-  sum = 0;
-  window.balance = window.balance - window.price_mascara;
-  alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
-  window.location.assign("index.html");
-}
-
-function pushCon_l(){
-  sum = 0;
-  window.balance = window.balance - window.price_lip;
-  alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
-  window.location.assign("index.html");
-}
-
-function pushCon_c(){
-  sum = 0;
-  window.balance = window.balance - window.price_cream;
-  alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
-  window.location.assign("index.html");
-}
-
-function pushCon_f(){
-  sum = 0;
-  window.balance = window.balance - window.price_foundation;
-  alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
-  window.location.assign("index.html");
-}
-
-function pushCon_p(){
-  sum = 0;
-  window.balance = window.balance - window.price_puff;
-  alert("รับสินค้าเรียบร้อยแล้ว เงินทอน "+ window.balance + " บาท \nขอบคุณที่ใช้บริการ");
-  window.location.assign("index.html");
-}
 
 /*-----------------------------------------------------------------------------------*/
 

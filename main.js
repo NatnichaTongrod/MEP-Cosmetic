@@ -182,7 +182,10 @@ function pushCon_p(){
 var p_pos = 59;
 function puff_dfa(paid){
   var img = document.getElementById('cir_puff');
-  if(sum < 95){
+  if (paid == 99 && sum < 95) {
+    img.style.left = "59px";
+  }
+  else if(sum < 95){
       if(paid === 5){
         sum = sum + paid;
         p_pos = p_pos + 61;
@@ -191,7 +194,13 @@ function puff_dfa(paid){
       }
       else if(paid === 10){
         sum = sum + paid;
-        p_pos = p_pos + 122;
+        if(sum==100){
+          p_pos = p_pos + 61;
+        }
+        else {
+          p_pos = p_pos + 122;
+        }
+
         img.style.left = p_pos + "px";
     	}
     }else{
@@ -205,7 +214,10 @@ function puff_dfa(paid){
 var f_pos = 73.5;
 function foun_dfa(paid){
   var img = document.getElementById('cir_foun');
-  if(sum < 70){
+  if (paid == 99 && sum < 70) {
+    img.style.left = "73.5px";
+  }
+  else if(sum < 70){
       if(paid === 5){
         sum = sum + paid;
         f_pos = f_pos + 79.5;
@@ -214,10 +226,18 @@ function foun_dfa(paid){
       }
       else if(paid === 10){
         sum = sum + paid;
-        f_pos = f_pos + 159;
+        if(sum == 75){
+          f_pos = f_pos + 79.5;
+        }
+        else{
+          f_pos = f_pos + 159;
+        }
+        
         img.style.left = f_pos + "px";
     	}
-    }else{
+    }
+    
+    else{
       img.style.left = f_pos;
     }
 
@@ -228,7 +248,10 @@ function foun_dfa(paid){
 var c_pos = 88;
 function cream_dfa(paid){
   var img = document.getElementById('cir_cream');
-  if(sum < 50){
+  if (paid == 99 && sum < 50) {
+    img.style.left = "88px";
+  }
+  else if(sum < 50){
       if(paid === 5){
         sum = sum + paid;
         c_pos = c_pos + 106.32;
@@ -237,7 +260,12 @@ function cream_dfa(paid){
       }
       else if(paid === 10){
         sum = sum + paid;
-        c_pos = c_pos + 212.64;
+        if(sum == 55){
+          c_pos = c_pos + 106.32;
+        }
+        else{
+          c_pos = c_pos + 212.64;
+        }
         img.style.left = c_pos + "px";
     	}
     }else{
@@ -252,7 +280,10 @@ var m_pos = 69.5;
 var i = 0.05;
 function mascara_dfa(paid){
   var img = document.getElementById('cir_mas');
-  if(sum < 80){
+  if (paid == 99 && sum < 80) {
+    img.style.left = "68.5px";
+  }
+  else if(sum < 80){
       if(paid === 5){
         sum = sum + paid;
         m_pos = m_pos + 70 + i;
@@ -262,8 +293,13 @@ function mascara_dfa(paid){
       }
       else if(paid === 10){
         sum = sum + paid;
-        i = i +0.05;
-        m_pos = m_pos + 140 + i;
+        if(sum == 85){
+          m_pos = m_pos + 70 + i;
+        }
+        else {
+          i = i +0.05;
+          m_pos = m_pos + 140 + i;
+         }
         img.style.left = m_pos + "px";
         i = i +0.05;
     	}
@@ -280,7 +316,11 @@ var l_pos = 83;
 var j = 0.04;
 function lip_dfa(paid){
   var img = document.getElementById('cir_lip');
-  if(sum < 65){
+
+  if (paid == 99 && sum < 65) {
+    img.style.left = "83px";
+  }
+  else if(sum < 65){
       if(paid === 5){
         sum = sum + paid;
         l_pos = l_pos + 84 + j;
@@ -290,12 +330,21 @@ function lip_dfa(paid){
       }
       else if(paid === 10){
         sum = sum + paid;
+        if(sum == 70) {
+          l_pos = l_pos + 84 + j;
+        }
+        else
+        {
         j = j +0.04;
         l_pos = l_pos + 168 + j;
+        }
         j = j +0.04;
         img.style.left = l_pos + "px";
     	}
-    }else{
+    }
+
+    
+    else{
       img.style.left = l_pos;
       j = 0.04;
     }
